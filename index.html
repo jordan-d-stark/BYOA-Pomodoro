@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="maple-leaf">
+                    <svg width="80" height="80" viewBox="-2015 -2000 4030 4030" xmlns="http://www.w3.org/2000/svg">
+                        <title>maple leaf from the flag of Canada</title>
+                        <path fill="#e53e3e" d="m-90 2030 45-863a95 95 0 0 0-111-98l-859 151 116-320a65 65 0 0 0-20-73l-941-762 212-99a65 65 0 0 0 34-79l-186-572 542 115a65 65 0 0 0 73-38l105-247 423 454a65 65 0 0 0 111-57l-204-1052 327 189a65 65 0 0 0 91-27l332-652 332 652a65 65 0 0 0 91 27l327-189-204 1052a65 65 0 0 0 111 57l423-454 105 247a65 65 0 0 0 73 38l542-115-186 572a65 65 0 0 0 34 79l212 99-941 762a65 65 0 0 0-20 73l116 320-859-151a95 95 0 0 0-111 98l45 863z"/>
+                    </svg>
+                </div>
+                <h1>True North Time</h1>
+                <p>Stay focused and productive, eh!</p>
+            </div>
+        </header>
+
+        <main>
+            <div class="timer-container">
+                <div class="timer-display">
+                    <div class="time" id="time">25:00</div>
+                    <div class="timer-label" id="timer-label">Work Time</div>
+                </div>
+
+                <div class="progress-ring">
+                    <svg class="progress-ring-svg" width="300" height="300">
+                        <circle class="progress-ring-circle-bg" cx="150" cy="150" r="120"></circle>
+                        <circle class="progress-ring-circle" cx="150" cy="150" r="120" id="progress-circle"></circle>
+                    </svg>
+                </div>
+
+                <div class="controls">
+                    <button class="btn btn-primary" id="start-btn">Start</button>
+                    <button class="btn btn-secondary" id="pause-btn" disabled>Pause</button>
+                    <button class="btn btn-secondary" id="reset-btn">Reset</button>
+                </div>
+
+                <div class="mode-selector">
+                    <button class="mode-btn active" data-mode="work" data-time="25">Work</button>
+                    <button class="mode-btn" data-mode="short-break" data-time="5">Short Break</button>
+                    <button class="mode-btn" data-mode="long-break" data-time="15">Long Break</button>
+                </div>
+            </div>
+
+            <div class="session-info">
+                <div class="session-counter">
+                    <span>Session: </span>
+                    <span id="session-count">0</span>
+                </div>
+                <div class="total-time">
+                    <span>Total Focus Time: </span>
+                    <span id="total-time">0:00</span>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Take breaks to maintain focus and productivity</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
